@@ -4,7 +4,9 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import PhoneNumber from './pages/PhoneNumber';
 import Otp from './pages/Otp';
-import Dashboard from './pages/SearchBus';
+import SearchBus from './pages/SearchBus';
+import SearchBusResult from './pages/SearchBusResult';
+import BusRoute from './pages/BusRoute';
 
 function App() {
   return (
@@ -14,7 +16,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/phoneNumber" element={<PhoneNumber />} />
         <Route path="/otp" element={<Otp />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/SearchBus" element={<SearchBus />} />
+        <Route path="/SearchBusResult" element={<SearchBusResult />} />
+        <Route path="/bus/:busNumber" element={<BusRoute />} />
+        {/* Dynamic route for bus details */}
       </Routes>
     </Router>
   );

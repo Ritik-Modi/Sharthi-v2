@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function Dashboard() {
+function SearchBus() {
     const [fromLocation, setFromLocation] = useState('');
     const [toLocation, setToLocation] = useState('');
     const [travelDate, setTravelDate] = useState('');
@@ -9,8 +9,9 @@ function Dashboard() {
 
     const handleSearch = (e) => {
         e.preventDefault();
-        // Here we can implement the bus search logic or simply redirect to result page with parameters
-        navigate('/results', { state: { fromLocation, toLocation, travelDate } });
+        console.log({ fromLocation, toLocation, travelDate }); // Debugging output
+        // Corrected the path to '/SearchBusResult'
+        navigate('/SearchBusResult', { state: { fromLocation, toLocation, travelDate } });
     };
 
     return (
@@ -75,11 +76,9 @@ function Dashboard() {
                         <p className="text-sm text-gray-600">Kashmiri Gate to Huda City Center via Model Town, Malka Ganj, and Yamuna Bazar.</p>
                         <div className="flex justify-between items-center mt-2">
                             <div className="flex items-center">
-                                {/* You can add a star rating component here */}
                                 <span className="text-yellow-500">★★★★☆</span>
                             </div>
                             <div className="flex items-center">
-                                {/* Profile Icon or Avatar */}
                                 <div className="w-6 h-6 bg-gray-300 rounded-full"></div>
                             </div>
                         </div>
@@ -90,4 +89,4 @@ function Dashboard() {
     );
 }
 
-export default Dashboard;
+export default SearchBus;

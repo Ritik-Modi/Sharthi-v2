@@ -32,7 +32,7 @@ function Otp() {
     const handleSubmit = (e) => {
         e.preventDefault();
         // Mock OTP verification logic
-        navigate('/dashboard'); // Redirect to dashboard after successful OTP verification
+        navigate('/SearchBus'); // Redirect to dashboard after successful OTP verification
     };
 
     return (

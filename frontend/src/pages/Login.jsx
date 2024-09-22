@@ -7,10 +7,15 @@ function Login() {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const handlePassengerLogin = (e) => {
         e.preventDefault();
-        // Mock login logic (assuming login is successful)
-        navigate('/phoneNumber'); // Redirect to Phone Number page after clicking "Sign In"
+        // Mock login logic for passenger
+        navigate('/phoneNumber'); // Redirect to Phone Number page after clicking "Sign In as Passenger"
+    };
+
+    const handleStaffLogin = () => {
+        // Redirect to staff login page
+        navigate('/staff'); // Redirect to Staff login page
     };
 
     return (
@@ -25,7 +30,7 @@ function Login() {
                 <h2 className="text-3xl font-semibold text-center text-gray-800">Sign in to Saarthi</h2>
 
                 {/* Input Fields */}
-                <form onSubmit={handleLogin} className="space-y-6">
+                <form onSubmit={handlePassengerLogin} className="space-y-6">
                     <div className="space-y-4">
                         <input
                             type="email"
@@ -54,14 +59,22 @@ function Login() {
                         <a href="/" className="text-sm text-orange-500">Forgot Password?</a>
                     </div>
 
-                    {/* Sign In Button */}
+                    {/* Sign in as Passenger Button */}
                     <button
                         type="submit"
                         className="w-full py-3 text-white bg-orange-500 rounded-lg hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500"
                     >
-                        Sign in
+                        Sign in as Passenger
                     </button>
                 </form>
+
+                {/* Login as Staff Button */}
+                <button
+                    onClick={handleStaffLogin}
+                    className="w-full py-3 mt-4 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                    Login as Staff
+                </button>
 
                 {/* Divider for alternative login methods */}
                 <div className="flex items-center justify-center my-4">
