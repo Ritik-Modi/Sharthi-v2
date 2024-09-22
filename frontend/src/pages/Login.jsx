@@ -15,11 +15,11 @@ function Login() {
 
     const handleStaffLogin = () => {
         // Redirect to staff login page
-        navigate('/staff'); // Redirect to Staff login page
+        navigate('/StaffPage'); // Redirect to Staff login page
     };
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-pink-300 via-pink-200 to-white">
+        <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-orange-300 via-orange-200 to-white">
             <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow-lg">
                 {/* Logo */}
                 <div className="flex justify-center">
@@ -86,11 +86,11 @@ function Login() {
                 {/* Social Login Buttons */}
                 <div className="flex space-x-4">
                     <button className="flex items-center justify-center w-full py-2 space-x-2 border rounded-lg">
-                        <img src="/google-icon.svg" alt="Google" className="w-6 h-6" />
+                        {/* <img src="/google-icon.svg" alt="Google" className="w-6 h-6" /> */}
                         <span>Google</span>
                     </button>
                     <button className="flex items-center justify-center w-full py-2 space-x-2 border rounded-lg">
-                        <img src="/apple-icon.svg" alt="Apple" className="w-6 h-6" />
+                        {/* <img src="/apple-icon.svg" alt="Apple" className="w-6 h-6" /> */}
                         <span>Apple</span>
                     </button>
                 </div>

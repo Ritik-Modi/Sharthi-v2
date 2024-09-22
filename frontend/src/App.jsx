@@ -7,6 +7,7 @@ import Otp from './pages/Otp';
 import SearchBus from './pages/SearchBus';
 import SearchBusResult from './pages/SearchBusResult';
 import BusRoute from './pages/BusRoute';
+import StaffPage from './pages/StaffPage';
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/SearchBus" element={<SearchBus />} />
         <Route path="/SearchBusResult" element={<SearchBusResult />} />
         <Route path="/bus/:busNumber" element={<BusRoute />} />
+        <Route path="/StaffPage" element={<StaffPage />} />
+
         {/* Dynamic route for bus details */}
       </Routes>
     </Router>

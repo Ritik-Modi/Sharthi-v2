@@ -11,10 +11,10 @@ function Home() {
 
     return (
         <div
-            className='flex items-center justify-center min-h-screen bg-pink-200'
+            className='flex items-center justify-center min-h-screen bg-orange-300'
             onClick={handlePageClick} // Redirects when user clicks anywhere on the page
         >
-            <img src={logo} alt="Logo" className='w-32 h-32' />
+            <img src={logo} alt="Logo" className='w-52 h-52' />
         </div>
     );
 }

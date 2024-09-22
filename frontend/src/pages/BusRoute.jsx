@@ -31,7 +31,7 @@ const BusRoute = () => {
     return (
         <div className="min-h-screen bg-gray-100">
             {/* Top Bar */}
-            <div className="flex items-center justify-between p-4 text-white rounded-b-lg shadow-md bg-gradient-to-r from-red-400 to-red-600">
+            <div className="flex items-center justify-between p-4 text-white rounded-b-lg shadow-md bg-gradient-to-r from-orange-400 to-orange-600">
                 <FaArrowLeft className="text-lg text-white cursor-pointer" />
                 <h1 className="text-lg font-bold">{busNumber} ({busInfo.time})</h1>
                 <FaEllipsisV className="text-lg text-white cursor-pointer" />
@@ -57,7 +57,7 @@ const BusRoute = () => {
 
                         {/* Timeline Dot */}
                         <div className="relative z-10">
-                            <div className={`w-6 h-6 rounded-full ${currentStop === stop.name ? 'bg-red-500' : 'bg-gray-300'} flex items-center justify-center`}>
+                            <div className={`w-6 h-6 rounded-full ${currentStop === stop.name ? 'bg-orange-500' : 'bg-gray-300'} flex items-center justify-center`}>
                                 {currentStop === stop.name && <FaBus className="text-white" />}
                             </div>
                         </div>
@@ -67,7 +67,7 @@ const BusRoute = () => {
                             <div className="flex items-center justify-between">
                                 <div className="font-bold text-gray-700 text-md">{stop.name}</div>
                                 <div className="text-sm text-gray-500">
-                                    {stop.arrival} - <span className="font-semibold text-red-500">{stop.departure}</span>
+                                    {stop.arrival} - <span className="font-semibold text-orange-500">{stop.departure}</span>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@ const BusRoute = () => {
 
                 {/* Departed Stop Status */}
                 {currentStop && (
-                    <div className="p-4 mt-4 font-bold text-center text-red-500 bg-red-100 rounded-md">
+                    <div className="p-4 mt-4 font-bold text-center text-orange-500 bg-orange-100 rounded-md">
                         Departed from {currentStop}<br />
                         Updated 1 minute ago
                     </div>

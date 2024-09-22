@@ -41,7 +41,7 @@ const SearchBusResult = () => {
 
     return (
         <div className="min-h-screen bg-gray-100">
-            <div className="px-6 py-4 text-white bg-red-300">
+            <div className="px-6 py-4 text-white bg-orange-300">
                 <h2 className="text-2xl font-bold">Kashmiri Gate → Huda City Center</h2>
             </div>
 
@@ -51,7 +51,7 @@ const SearchBusResult = () => {
                     <button
                         key={date}
                         onClick={() => handleDateClick(date)}
-                        className={`px-4 py-2 ${selectedDate === date ? 'text-white bg-red-300' : ''}`}
+                        className={`px-4 py-2 ${selectedDate === date ? 'text-white bg-orange-300' : ''}`}
                     >
                         {date}
                     </button>
